@@ -1,0 +1,101 @@
+<%= form_for :life do |f|  %>
+<table class="table table-hover" data-controller="life_rank">
+  <thead>
+    <tr>
+      <th colspan="4" align="left"><h2>Life Rank</h2></th>
+    </tr>
+    <tr>
+      <th>Number</th>
+      <th>Requirements</th>
+      <th>Completed</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-name="one_li">
+      <td>1</td>
+      <td>Be active in your unit (and patrol if you are in one) for at least six months as a Star Scout.</td>
+      <td> <% if(!@life.one_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:one_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="two_li">
+      <td>2</td>
+      <td>Demonstrate Scout spirit by living the Scout Oath (Promise) and Scout Law in your everyday life.</td>
+      <td> <% if(!@life.two_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:two_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="three_li">
+      <td>3</td>
+      <td>
+      <p>
+        Earn five more merit badges (so that you have 11 in all), including any three more from the required list for Eagle. (See the Eagle Rank Requirements, number 3, for this list.) A Scout may choose any of the 15 required merit badges in the 12 categories to fulfill this requirement.
+      </p>
+      <p>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+      </p></td>
+      <td> <% if(!@life.three_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:three_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="four_li">
+      <td>4</td>
+      <td>While a Star Scout, take part in service project(s) totaling at least six hours of work. These projects must be approved by your Scoutmaster.</td>
+      <td> <% if(!@life.four_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:four_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="five_li">
+      <td>5</td>
+      <td>While a Star Scout, serve actively for six months in one or more of the troop positions of responsibility listed in requirement 5 for Star Scout (or carry out a Scoutmaster-assigned leadership project to help the troop). <td> <% if(!@life.five_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:five_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="six_li">
+      <td>6</td>
+      <td>While a Star Scout, use the EDGE method to teach a younger Scout the skills from ONE of the following six choices, so that he is prepared to pass those requirements to his unit leader’s satisfaction:
+        <p>a.  Second Class—7a and 7c (first aid)</p>
+        <p>b.  Second Class—1a (outdoor skills)</p>
+        <p>c.  Second Class—3c, 3d, 3e, and 3f (cooking/camping)</p>
+        <p>d.  First Class—8a, 8b, 8c, and 8d (first aid)</p>
+        <p>e.  First Class—1, 7a, and 7b (outdoor skills)</p>
+        <p>f.  First Class—4a, 4b, and 4d (cooking/camping)</p>
+        <p>g.  Three requirements from one of the required Eagle merit badges, as approved by your unit leader.</p>
+      </td>
+      <td> <% if(!@life.six_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:six_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="seven_li">
+      <td>7</td>
+      <td>Take part in a Scoutmaster conference.</td>
+      <td> <% if(!@life.seven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:seven_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="six_li">
+      <td>6</td>
+      <td>Complete your board of review.</td>
+      <td> <% if(!@life.six_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:six_li_date, :class => 'datepicker')%> </td>
+    </tr>
+  </tbody>
+</table>
+<%= javascript_tag do %>
+window.advancementId = "<%=j @life.id.to_s %>";
+<% end %>
+<% end %>

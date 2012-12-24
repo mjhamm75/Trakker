@@ -1,0 +1,94 @@
+<%= form_for :eagle do |f|  %>
+<table class="table table-hover" data-controller="eagle_rank">
+  <thead>
+    <tr>
+      <th colspan="4" align="left"><h2>Eagle Rank</h2></th>
+    </tr>
+    <tr>
+      <th>Number</th>
+      <th>Requirements</th>
+      <th>Completed</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-name="one_li">
+      <td>1</td>
+      <td>Be active in your troop, team, crew, or ship for a period of at least six months after you have achieved the rank of Life Scout.</td>
+      <td> <% if(!@eagle.one_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:one_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="two_li">
+      <td>2</td>
+      <td>Demonstrate that you live by the principles of the Scout Oath and Law in your daily life. List the names of individuals who know you personally and would be willing to provide a recommendation on your behalf, including parents/guardians, religious, educational, and employer references.</td>
+      <td> <% if(!@eagle.two_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:two_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="three_li">
+      <td>3</td>
+      <td>
+      <p>
+        Earn a total of 21 merit badges (10 more than you already have), including the following:
+      </p>
+      <p>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+        <%= select_tag "", options_from_collection_for_select(@eagleBadges, 'id', 'name'), :prompt => "--"  %>
+      </p></td>
+      <td> <% if(!@eagle.three_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:three_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="four_li">
+      <td>4</td>
+      <td>While a Life Scout, serve actively for a period of six months in one or more of the following positions of responsibility:
+        <p>a. Boy Scout troop. Patrol leader, assistant senior patrol leader, senior patrol leader, Venture patrol leader, troop guide, Order of the Arrow troop representative, den chief, scribe, librarian, historian, quartermaster, junior assistant Scoutmaster, chaplain aide, instructor, Webmaster, or Leave No Trace Trainer.</p>
+        <p>b. Varsity Scout team. Captain, cocaptain, program manager, squad leader, team secretary, Order of the Arrow team representative, librarian, historian, quartermaster, chaplain aide, instructor, den chief, Webmaster, or Leave No Trace Trainer.</p>
+        <p>c. Venturing crew/ship. President, vice president, secretary, treasurer, quartermaster, historian, den chief, guide, boatswain, boatswain's mate, yeoman, purser, storekeeper, Webmaster, or Leave No Trace Trainer.</p>
+      </td>
+      <td> <% if(!@eagle.four_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:four_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="five_li">
+      <td>5</td>
+      <td>While a Life Scout, plan, develop, and give leadership to others in a service project helpful to any religious institution, any school, or your community. (The project must benefit an organization other than Boy Scouting.) A project proposal must be approved by the organization benefiting from the effort, your unit leader and unit committee, and the council or district before you start. You must use the Eagle Scout Service Project Workbook, BSA publication No. 512-927, in meeting this requirement. (To learn more about the Eagle Scout service project, see the Guide to Advancement, topics 9.0.2.0 through 9.0.2.15.)<td> <% if(!@eagle.five_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:five_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="six_li">
+      <td>6</td>
+      <td>Take part in a unit leader conference.</td>
+      <td> <% if(!@eagle.six_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:six_li_date, :class => 'datepicker')%> </td>
+    </tr>
+    <tr data-name="seven_li">
+      <td>7</td>
+      <td>Successfully complete an Eagle Scout board of review.</td>
+      <td> <% if(!@eagle.seven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field(:seven_li_date, :class => 'datepicker')%> </td>
+    </tr>
+  </tbody>
+</table>
+<%= javascript_tag do %>
+window.advancementId = "<%=j @eagle.id.to_s %>";
+<% end %>
+<% end %>

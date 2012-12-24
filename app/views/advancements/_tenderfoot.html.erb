@@ -1,0 +1,173 @@
+<%= form_for :tenderfoot do |f| %>
+<table class="table table-hover" data-controller="tenderfoot_rank">
+  <thead>
+    <tr>
+      <th colspan="4" align="left"><h2>Tenderfoot Rank</h2></th>
+    </tr>
+    <tr>
+      <th>Number</th>
+      <th>Requirements</th>
+      <th>Completed</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-name="one_li">
+      <td>1</td>
+      <td>Present yourself to your leader, properly dressed, before going on an overnight camping trip. Show the camping gear you will use. Show the right way to pack and carry it.</td>
+      <td> <% if(!@tenderfoot.one_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :one_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="two_li">
+      <td>2</td>
+      <td>Spend at least one night on a patrol or troop campout. Sleep in a tent you have helped pitch.</td>
+      <td> <% if(!@tenderfoot.two_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :two_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="three_li">
+      <td>3/td> <td>On the campout, assist in preparing and cooking one of your patrol’s meals. Tell why it is important for each patrol member to share in meal preparation and cleanup, and explain theimportance of eating together.</td>
+      <td> <% if(!@tenderfoot.three_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :three_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="four_li">
+      <td>4a</td>
+      <td>Demonstrate how to whip and fuse the ends of a rope.</td>
+      <td> <% if(!@tenderfoot.four_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :four_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="five_li">
+      <td>4b</td>
+      <td>Demonstrate that you know how to tie the following knots and tell what their uses are: two half hitches and the taut-line hitch.</td>
+      <%= puts @tenderfoot.five_li %>
+      <td> <% if(!@tenderfoot.five_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :five_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="six_li">
+      <td>4c</td>
+      <td>Using the EDGE method, teach another person how to tie the square knot.</td>
+      <td> <% if(!@tenderfoot.six_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :six_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="seven_li">
+      <td>5</td>
+      <td>Explain the rules of safe hiking, both on the highway and cross- country, during the day and at night. Explain what to do if you are lost.</td>
+      <td> <% if(!@tenderfoot.seven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :seven_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eight_li">
+      <td>6</td>
+      <td>Demonstrate how to display, raise, lower, and fold the American flag.</td>
+      <td> <% if(!@tenderfoot.eight_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eight_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="nine_li">
+      <td>7</td>
+      <td>Repeat from memory and explain in your own words the Scout Oath, Law, motto, and slogan.</td>
+      <td> <% if(!@tenderfoot.nine_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :nine_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="ten_li">
+      <td>8</td>
+      <td>Know your patrol name, give the patrol yell, and describe your patrol flag.</td>
+      <td> <% if(!@tenderfoot.ten_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :ten_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eleven_li">
+      <td>9</td>
+      <td>Explain the importance of the buddy system as it relates to your personal safety on outings and in your neighborhood. Describe what a bully is and how you should respond to one.</td>
+      <td> <% if(!@tenderfoot.eleven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eleven_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twelve_li">
+      <td>10</td>
+      <td>Record your best in the following tests:</td>
+      <td> <% if(!@tenderfoot.twelve_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twelve_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="thirteen_li">
+      <td>10b</td>
+      <td>Show improvement in the activities listed in requirement 10a after practicing for 30 days.</td>
+      <td> <% if(!@tenderfoot.thirteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :thirteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="fourteen_li">
+      <td>11</td>
+      <td>Identify local poisonous plants; tell how to treat for exposure to them.</td>
+      <td> <% if(!@tenderfoot.fourteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :fourteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="fifteen_li">
+      <td>12a</td>
+      <td>Demonstrate how to care for someone who is choking.</td>
+      <td> <% if(!@tenderfoot.fifteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :fifteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="sixteen_li">
+      <td>12b</td>
+      <td>Show first aid for the following:</td>
+      <td> <% if(!@tenderfoot.sixteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :sixteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="seventeen_li">
+      <td>13</td>
+      <td>Tell what precautions must be taken for a safe swim.Demonstrate Scout spirit by living the Scout Oath (Promise) and Scout Law in your everyday life. Discuss four specific examples of how you have lived the points of the Scout Law in your daily life.</td>
+      <td> <% if(!@tenderfoot.seventeen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :seventeen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eighteen_li">
+      <td>14</td>
+      <td>Participate in a Scoutmaster conference.</td>
+      <td> <% if(!@tenderfoot.eighteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eighteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="nineteen_li">
+      <td>15</td>
+      <td>Complete your board of review.</td>
+      <td> <% if(!@tenderfoot.nineteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :nineteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+
+  </tbody>
+</table>
+<%= javascript_tag do %>
+window.advancementId = "<%=j @tenderfoot.id.to_s %>";
+<% end %>
+<% end %>

@@ -1,0 +1,223 @@
+<%= form_for :second_class do |f| %>
+<table class="table table-hover" data-controller="second_class_rank">
+  <thead>
+    <tr>
+      <th colspan="4" align="left"><h2>Second Class Rank</h2></th>
+    </tr>
+    <tr>
+      <th>Number</th>
+      <th>Requirements</th>
+      <th>Completed</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-name="one_li">
+      <td>1a</td>
+      <td>Demonstrate how a compass works and how to orient a map. Explain what map symbols mean.</td>
+      <td> <% if(!@second_class.one_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :one_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="two_li">
+      <td>1b</td>
+      <td>Using a compass and a map together, take a five-mile hike (or 10 miles by bike) approved by your adult leader and your parent or guardian.*</td>
+      <td> <% if(!@second_class.two_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :two_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="three_li">
+      <td>2</td>
+      <td>Discuss the principles of Leave No Trace.</td>
+      <td> <% if(!@second_class.three_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :three_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="four_li">
+      <td>3a</td>
+      <td>Since joining, have participated in five separate troop/patrol activities (other than troop/patrol meetings), two of which included camping overnight.</td>
+      <td> <% if(!@second_class.four_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :four_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="five_li">
+      <td>3b</td>
+      <td>On one of these campouts, select your patrol site and sleep in a tent that you pitched. Explain what factors you should consider when choosing a patrol site and where to pitch a tent.</td>
+
+      <%= puts @second_class.five_li %>
+      <td> <% if(!@second_class.five_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :five_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="six_li">
+      <td>3c</td>
+      <td>Demonstrate proper care, sharpening, and use of the knife, saw, and ax, and describe when they should be used.</td>
+      <td> <% if(!@second_class.six_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :six_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="seven_li">
+      <td>3d</td>
+      <td>Use the tools listed in requirement 3c to prepare tinder, kindling,and fuel for a cooking fire.</td>
+      <td> <% if(!@second_class.seven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :seven_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eight_li">
+      <td>3e</td>
+      <td>Discuss when it is appropriate to use a cooking fire and a lightweight stove. Discuss the safety procedures for using both.</td>
+      <td> <% if(!@second_class.eight_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eight_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="nine_li">
+      <td>3f</td>
+      <td>In an approved place and at an approved time, demonstrate how to build a fire and set up a lightweight stove. Note: Lighting the fire is not required.</td>
+      <td> <% if(!@second_class.nine_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :nine_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="ten_li">
+      <td>3g</td>
+      <td>On one campout, plan and cook one hot breakfast or lunch, selecting foods from the food guide pyramid. Explain the importance of good nutrition. Tell how to transport, store, and prepare the foods you selected.</td>
+      <td> <% if(!@second_class.ten_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :ten_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eleven_li">
+      <td>4</td>
+      <td>Participate in a flag ceremony for your school, religious institution, chartered organization, community, or troop activity. Explain to your leader what respect is due the flag of the United States.</td>
+      <td> <% if(!@second_class.eleven_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eleven_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twelve_li">
+      <td>5</td>
+      <td>Participate in an approved (minimum of one hour)service project.</td>
+      <td> <% if(!@second_class.twelve_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twelve_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="thirteen_li">
+      <td>6</td>
+      <td>Identify or show evidence of at least 10 kinds of wild animals (birds, mammals, reptiles, fish, mollusks) found in your community.</td>
+      <td> <% if(!@second_class.thirteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :thirteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="fourteen_li">
+      <td>7a</td>
+      <td>Show what to do for “hurry” cases of stopped breathing, serious bleeding, and ingested poisoning.</td>
+      <td> <% if(!@second_class.fourteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :fourteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="fifteen_li">
+      <td>7b</td>
+      <td>Prepare a personal first-aid kit to take with you on a hike.</td>
+      <td> <% if(!@second_class.fifteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :fifteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="sixteen_li">
+      <td>7c</td>
+      <td>Demonstrate first aid for the following:</td>
+      <td> <% if(!@second_class.sixteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :sixteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="seventeen">
+      <td>8a</td>
+      <td>Tell what precautions must be taken for a safe swim.</td>
+      <td> <% if(!@second_class.seventeen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :seventeen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="eighteen_li">
+      <td>8b</td>
+      <td>Demonstrate your ability to jump feetfirst into water over your head in depth, level off and swim 25 feet on the surface, stop, turn sharply, resume swimming, then return to your starting place.</td>
+      <td> <% if(!@second_class.eighteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :eighteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="nineteen_li">
+      <td>8c</td>
+      <td>Demonstrate water rescue methods by reaching with your arm or leg, by reaching with a suitable object, and by throwing lines and objects. Explain why swimming rescues should not be attempted when a reaching or throwing rescue is possible, and explain why and how a rescue swimmer should avoid contact with the victim.</td>
+      <td> <% if(!@second_class.nineteen_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :nineteen_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twenty_li">
+      <td>9a</td>
+      <td>Participate in a school, community, or troop program on the dangers of using drugs, alcohol, and tobacco and other practices that could be harmful to your health. Discuss your participation in the program with your family, and explain the dangers of substance addictions.</td>
+      <td> <% if(!@second_class.twenty_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twenty_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twentyone_li">
+      <td>9b</td>
+      <td>Explain the three R's of personal safety and protection.</td>
+      <td> <% if(!@second_class.twentyone_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twentyone_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twentytwo_li">
+      <td>10</td>
+      <td>Earn an amount of money agreed upon by you and your parent, then save at least 50 percent of that money.</td>
+      <td> <% if(!@second_class.twentytwo_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twentytwo_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twentythree_li">
+      <td>11</td>
+      <td>Demonstrate  Scout spirit by living the Scout Oath (Promise) and Scout Law in your everyday life. Discuss four specific examples (different from those used for Twentythreederfoot requirement 13) of how you have lived the points of the Scout Law in your daily life.</td>
+      <td> <% if(!@second_class.twentythree_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twentythree_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twentyfour_li">
+      <td>12</td>
+      <td>Participate in a Scoutmaster conference.</td>
+      <td> <% if(!@second_class.twentyfour_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twentyfour_li_date, :class => "datepicker" %> </td>
+    </tr>
+    <tr data-name="twentyfive_li">
+      <td>13</td>
+      <td>Complete your board of review.</td>
+      <td> <% if(!@second_class.twentyfive_li.blank?) %>
+      <%=  image_tag("checkmark.png") %>
+      <% end %> </td>
+      <td> <%= f.text_field :twentyfive_li_date, :class => "datepicker" %> </td>
+    </tr>
+
+  </tbody>
+</table>
+<%= javascript_tag do %>
+window.advancementId = "<%=j @second_class.id.to_s %>";
+<% end %>
+<% end %>

@@ -1,0 +1,38 @@
+<div class="span9">
+  <h1>Ranks</h1>
+  <div class="tabbable">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#pane1" data-toggle="tab">Boy Scout</a></li>
+      <li class=""><a href="#pane2" data-toggle="tab">Tenderfoot</a></li>
+      <li class=""><a href="#pane3" data-toggle="tab">Second Class</a></li>
+      <li class=""><a href="#pane4" data-toggle="tab">First Class</a></li>
+      <li class=""><a href="#pane5" data-toggle="tab">Star</a></li>
+      <li class=""><a href="#pane6" data-toggle="tab">Life</a></li>
+      <li class=""><a href="#pane7" data-toggle="tab">Eagle</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="pane1" class="tab-pane fade in active">
+        <%= render :partial => @boy_scout_partial, :locals => { :boy_scout => @boy_scout} %>
+      </div>
+      <div id="pane2" class="tab-pane fade">
+        <%= render :partial => "tenderfoot.html.erb", :locals => { :tenderfoot => @tenderfoot} %>
+      </div>
+      <div id="pane3" class="tab-pane fade">
+        <%= render :partial => "second_class.html.erb", :locals => { :second_class => @second_class} %>
+      </div>
+      <div id="pane4" class="tab-pane fade">
+        <%= render :partial => "first_class.html.erb", :locals => { :first_class => @first_class} %>
+      </div>
+      <div id="pane5" class="tab-pane fade">
+        <%= render :partial => "star.html.erb", :locals => { :star => @star } %>
+      </div>
+      <div id="pane6" class="tab-pane fade">
+        <%= render :partial => "life.html.erb", :locals => { :life => @life } %>
+      </div>
+      <div id="pane7" class="tab-pane fade">
+        <%= render :partial => "eagle.html.erb", :locals => { :boy_scout => @boy_scout} %>
+      </div>
+    </div>
+  </div>
+</div>
+
